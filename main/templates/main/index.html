@@ -1,0 +1,320 @@
+{% extends 'main/base.html' %}
+{% load static %} 
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<style>
+  .timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ccc;
+    left: 30px;
+    margin-right: -1.5px;
+  }
+  .timeline li {
+    margin-bottom: 20px;
+    padding-left: 40px;
+  }
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+  }
+  
+  .presentation-img {
+    width: 250px;
+    height: auto;
+  }
+  
+  .small-card .card-img-top {
+    max-width: 200px; /* adjust as needed */
+    max-height: 300px; /* adjust as needed */
+    object-fit: cover;
+  }
+  
+  </style>
+
+  
+<div class="jumbotron">
+
+  <img src="{% static 'main/blagoj.png' %}" alt="Your Name" class="rounded-circle" width="150" height="150">
+  <h1 class="display-4">Hello, I'm Blagoj Delipetrev</h1>
+  <p class="lead">Welcome to my personal website.</p>
+  <hr class="my-4">
+  <p>With two doctorates in artificial intelligence, machine learning, and cloud computing, 
+    I've amassed a wealth of expertise spanning from scientific project management at the European Commission's Joint Research Centre to 
+    serving as the CEO/CTO of Bitt Solutions, a company I founded in 2015. Recently achieving tenure as a full professor in computer science, 
+    I've skillfully navigated through public, private, and academic sectors,
+     specializing in contract negotiations, project management, stakeholder relationships, team building, 
+     and solution implementation.<a href="{% static 'main/CV.pdf' %}" role="button">View My CV</a> </p>
+
+  <!-- QR code with link -->
+  <a href="https://www.linkedin.com/in/blagojdelipetrev/">
+    <img src="{% static 'main/qr.png' %}" alt="QR Code" width="150" height="150">
+  </a>
+
+  <!-- Text with link -->
+  <p>
+    <a href="https://www.linkedin.com/in/blagojdelipetrev/">Follow me on LinkedIn for the latest updates on AI</a>
+  </p>
+
+</div>
+
+<!-- Icons for LinkedIn, GitHub, Twitter, and Email -->
+<div class="d-flex justify-content-center">
+  <a href="https://www.linkedin.com/in/blagojdelipetrev" class="m-2">
+    <i class="fab fa-linkedin fa-2x"></i>
+  </a>
+  <a href="https://github.com/deblagoj" class="m-2">
+    <i class="fab fa-github fa-2x"></i>
+  </a>
+  <a href="https://twitter.com/BDelipetrev" class="m-2">
+    <i class="fab fa-twitter fa-2x"></i>
+  </a>
+  <a href="mailto:blagoj.delipetrev@gmail.com" class="m-2">
+    <i class="fas fa-envelope fa-2x"></i>
+  </a>
+</div>
+
+<!-- Section for updates from LinkedIn posts -->
+<div class="my-5">
+  <h2>Current Interest</h2>
+  <!-- Here you can add your LinkedIn posts manually -->
+  <div class="card my-3">
+    <div class="card-body">
+      <h5 class="card-title"> AI, Large Language Models, GPT4, problems and regulation</h5>
+      <p class="card-text">I am deeply fascinated by the latest breakthroughs in Artificial Intelligence, 
+        particularly large language models like ChatGPT. 
+        The rapid progress in this domain is truly exhilarating. 
+        As we navigate these remarkable times, I am eager to leverage my knowledge and experience to contribute significantly to the advancement of AI. 
+        Furthermore, I am keenly interested in the development of effective AI regulations to ensure its responsible and ethical use. 
+        Indeed, I am thrilled to be part of this dynamic landscape, and I look forward to creating a positive impact through my work in AI.</p>
+    </div>
+  </div>
+  <!-- Add more posts as needed -->
+</div>
+
+
+<!-- Section for featured talks -->
+<div class="my-5">
+  <h2>Featured Talks</h2>
+  <div class="row">
+    <!-- Talk 1 -->
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GA1n8J2TJHo" allowfullscreen></iframe>
+      </div>
+    </div>
+    
+    <!-- Add more talks as needed -->
+  </div>
+</div>
+
+<!-- Section for featured talks -->
+<div class="my-5">
+  <h2>Featured Presentations</h2>
+  <div class="row">
+    <!-- Talk 1 -->
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <img src="{% static 'main/images/ai_now.png' %}" alt="Image for Presentation 1" class="presentation-img" >
+      <h4><a href="https://drive.google.com/file/d/1HC8EY4j4BgBPpb6r9i9oTuDuT235Lc59/view?usp=share_link">AI Now overview of state of AI, generative AI, issues, economy and EU regulatory framework</a></h4>
+    </div>
+    <!-- Talk 2 -->
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <img src="{% static 'main/images/no-codeGeoai.png' %}" alt="Image for Presentation 2" class="presentation-img" >
+      <h4><a href="https://drive.google.com/file/d/1yDGNb3O4CvyA63D77uyuTxlahMUPTGDa/view?usp=share_link">No-code geoAI</a></h4>
+    </div>
+    <!-- Add more talks as needed -->
+  </div>
+</div>
+
+
+<!-- Section for work experience timeline -->
+<div class="my-5">
+  <h2>Work Experience</h2>
+  <ul class="timeline">
+    <!-- Job 1 -->
+    <li>
+      <h5>2017 - 2023 Artificial Inteligence researcher @ <span class="text-muted">European Commission Joint Research Centre</span></h5>
+      <p>I've held pivotal roles in several projects aimed at facilitating the development and implementation of AI, data, and technology strategies including
+ <a href="https://ai-watch.ec.europa.eu/index_en">AI WATCH project</a> (2018 - 2022),  <a href="https://digital-strategy.ec.europa.eu/en/library/destination-earth"> Destination Earth initiative </a>
+           and <a href="https://joint-research-centre.ec.europa.eu/scientific-activities-z/data-ecosystems-and-enablers_en"> ENABLED project.</a> These roles encompassed strategic planning, stakeholder negotiation, technical task implementation, and project management.
+            I've co-authored over <a href="https://publications.jrc.ec.europa.eu/repository/search?query=delipetrev">20 publications</a>, further representing the European Commission at various public events.
+
+     
+    </li>
+    <!-- Job 2 -->
+    <li>
+      <h5>2015 - 2017 Funder and CEO/CTE @ <span class="text-muted"></span>Bitt Solutions</h5>
+      <p>As the CEO and CTO of <a href="https://bitt.solutions">BITT Solutions</a>, an AI consulting and outsourcing firm, I led the development and execution of key AI projects, 
+        including optimizing call center algorithms, AI-powered real estate lead generation, and machine learning solutions for cloud pricing. 
+        This involved frequently managing multiple remote teams serving clients mainly from the United States.
+
+        
+    <!-- Add more jobs as needed -->
+
+
+     <!-- Job 3 -->
+     <li>
+      <h5>2015 - 2017 Management board member @ <span class="text-muted"></span>Marnet</h5>
+      <p>In my position, I was responsible for shaping the overall strategy, vision, values, and objectives of the institution. 
+        My work focused on promoting and disseminating the use of information and communication technologies, particularly within the academic and research sectors. 
+        I played a pivotal role in developing policies to establish a <a href="https://marnet.mk/en/">Marnet national academic network</a>, and managed the institution's finances effectively.</p>
+    </li>
+    <!-- Add more jobs as needed -->
+
+
+     <!-- Job 4 -->
+     <li>
+      <h5>2003 - 2017 Computer Science professor  @ <span class="text-muted"></span>University Goce Delcev</h5>
+      <p>My academic career began as a Teaching Assistant in 2003, progressing through ranks to become a Senior Assistant and then Assistant Professor by 2011. 
+        I attained the position of Associate Professor in 2015, along with the election as Vice-Dean. 
+        The year 2021 marked my promotion to Professor of Computer Science. 
+        My teaching experience covers a variety of subjects, including <b>Advanced Algorithms, Machine Learning, Distributed Computer Systems, Algorithms and Data Structures, and Geographic Information Systems (GIS)</b>. 
+        Additionally, I've being a mentor to numerous Master's and PhD students. Over this period, I've published more than <a href="https://scholar.google.com/citations?hl=en&user=efC-Axkc8T8C&view_op=list_works&sortby=pubdate">50 scientific papers </a>
+        and served as a reviewer for multiple international journals. I had active involvement in various national and international projects and activities.
+        </p>
+    </li>
+    <!-- Add more jobs as needed -->
+  </ul>
+</div>
+
+
+
+
+<!-- Section for work experience timeline -->
+<div class="my-5">
+  <h2>Education </h2>
+  <ul class="timeline">
+    <!-- Job 1 -->
+    <li>
+      <h5>2010 - 2016 PhD in Computer Science @ <span class="text-muted">TU Delft, the Netherlands</span></h5>
+      <p>Research field: Machine learning, AI, optimization algorithms, reinforcement learning </p>
+     
+    </li>
+    <!-- Job 2 -->
+    <li>
+      <h5>2007 - 2011 PhD in Computer Science @ <span class="text-muted"></span>University Ss Cyril and Methodius Faculty of Electrical Engineering and Information Technologies</h5>
+      <p>Research field in Cloud computing, service-oriented architecture (SOA). </p>
+
+     <!-- Job 3 -->
+     <li>
+      <h5>2004 - 2007 M.Sc. in Computer Science @ <span class="text-muted"></span>University Ss Cyril and Methodius Faculty of Electrical Engineering and Information Technologies</h5>
+      <p>Research field in web GIS, spatial data infrastructure (SDI).</p>
+    </li>
+
+     <!-- Job 4 -->
+     <li>
+      <h5>1998 - 2003 B.Sc. in Computer Science @ <span class="text-muted"></span>University Ss Cyril and Methodius Faculty of Electrical Engineering and Information Technologies</h5>
+      <p>Department of computer technologies, informatics, and automatics.</p>
+    </li>
+
+    
+  </ul>
+</div>
+
+
+<section id="accomplishments" class="my-5">
+  <div class="container">
+      <div class="row">
+    
+            <h2>Achievements </h2>
+
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <ul class="list-unstyled">
+                  <li> <b>2017 - 2013 </b> First Macedonian to be employed as Contract Agent for the European Commission Joint Research Centre (among 3500 employees).</li>
+                  <li><b>2018 </b> 40 under 40, United Macedonian Diaspora.</li>
+                  <li><b>2010 - 2014 </b> Among the first recipients from Macedonia of the PhD Fellowship from the Netherlands government. </li>
+                  <li><b>22012-2013;2013-2014 </b>  Two times grant receiver from Open Society Scholarship Programs Global Supplementary Grant.</li>
+                  <li><b>2008 </b>  HYDROAID Fellowship from Italian Ministry of Foreign Affairs.</li>
+                  <li><b>2003 </b> Ranked among the best students in my generation with all top grades in the last year.</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- Section for publications -->
+<div class="my-5">
+  <h2>Selected Policy Publications</h2>
+  <div class="row">
+    <!-- Publication 1 -->
+    <div class="col-sm-6 col-md-4 col-lg-3 small-card">
+      <div class="card">
+        <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC113826">
+          <img class="card-img-top" src="{% static 'main/images/1.jpg' %}" alt="Artificial Intelligence: A European Perspective">
+        </a>
+      </div>
+    </div>
+    <!-- Publication 2 -->
+    <div class="col-sm-6 col-md-4 col-lg-3 small-card">
+      <div class="card">
+        <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC126426">
+          <img class="card-img-top" src="{% static 'main/images/2.jpg' %}" alt="AI Watch. Defining Artificial Intelligence 2.0">
+        </a>
+      </div>
+    </div>
+    <!-- Add more publications as needed -->
+
+
+    <div class="col-sm-6 col-md-4 col-lg-3 small-card">
+      <div class="card">
+        <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC120469">
+          <img class="card-img-top" src="{% static 'main/images/3.jpg' %}" alt="Historical Evolution of Artificial Intelligence">
+        </a>
+      </div>
+    </div>
+
+
+
+
+    <div class="col-sm-6 col-md-4 col-lg-3 small-card">
+      <div class="card">
+        <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC116179">
+          <img class="card-img-top" src="{% static 'main/images/4.jpg' %}" alt="Digital Transformation in Transport, Construction, Energy, Government and Public Administration">
+        </a>
+      </div>
+    </div>
+
+
+    
+
+
+    <div class="col-sm-6 col-md-4 col-lg-3 small-card">
+      <div class="card">
+        <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC122457">
+          <img class="card-img-top" src="{% static 'main/images/7.jpg' %}" alt="Destination Earth: Survey on “Digital Twins” technologies and activities, in the Green Deal area">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 col-lg-3 small-card">
+      <div class="card">
+        <a href="https://publications.jrc.ec.europa.eu/repository/handle/JRC129903">
+          <img class="card-img-top" src="{% static 'main/images/8.jpg' %}" alt="Enlargement and Integration Workshop “Digital Transformation, Data and AI in the Western Balkans”">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

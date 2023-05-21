@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% load static %} 
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+
+  <img src="{% static 'main/blagoj.png' %}" alt="Your Name" class="rounded-circle" width="150" height="150">
+  <h1 class="display-4">Hello, I'm Blagoj Delipetrev</h1>
+  <p class="lead">Welcome to my personal website.</p>
+
+
+</div>
+
+<!-- Icons for LinkedIn, GitHub, Twitter, and Email -->
+<div class="d-flex justify-content-center">
+  <a href="https://www.linkedin.com/in/blagojdelipetrev" class="m-2">
+    <i class="fab fa-linkedin fa-2x"></i>
+  </a>
+  <a href="https://github.com/deblagoj" class="m-2">
+    <i class="fab fa-github fa-2x"></i>
+  </a>
+  <a href="https://twitter.com/BDelipetrev" class="m-2">
+    <i class="fab fa-twitter fa-2x"></i>
+  </a>
+  <a href="mailto:blagoj.delipetrev@gmail.com" class="m-2">
+    <i class="fas fa-envelope fa-2x"></i>
+  </a>
+</div>
+
+<h2>My Blog</h2>
+{% for post in posts %}
+        <h2><a href="{% url 'main:blog_post' post.id %}">{{ post.title }}</a></h2>
+        <p>Published on: {{ post.pub_date }}</p>
+    {% endfor %}
+
+
+{% endblock %}
