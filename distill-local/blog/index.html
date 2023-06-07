@@ -52,6 +52,68 @@
     </nav>
 
     <div class="container mt-4">
+
+      <style>
+        .timeline {
+          list-style: none;
+          padding: 0;
+          position: relative;
+        }
+        .timeline::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background: #ccc;
+          left: 30px;
+          margin-right: -1.5px;
+        }
+        .timeline li {
+          margin-bottom: 20px;
+          padding-left: 40px;
+        }
+        .timeline li::before {
+          content: '';
+          position: absolute;
+          left: 18px;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: #ccc;
+        }
+        
+        .presentation-img {
+          width: 250px;
+          height: auto;
+        }
+        
+        .small-card .card-img-top {
+          max-width: 200px; /* adjust as needed */
+          max-height: 300px; /* adjust as needed */
+          object-fit: cover;
+        }
+        
+
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        
+        .image-container {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .image-container img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      </style>
+
       
 <div class="jumbotron">
 
@@ -78,8 +140,11 @@
   </a>
 </div>
 
-<h2>My Blog</h2>
+<p></p>
 
+        <h2><a href="/blog/42/">Building a Personal Web Page in Hours, Not Days, with GPT-4</a></h2>
+        <p>Published on: May 22, 2023, 8:45 a.m.</p>
+    
 
 
 

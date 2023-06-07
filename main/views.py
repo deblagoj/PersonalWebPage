@@ -33,3 +33,5 @@ def new_post(request):
     else:
         form = BlogPostForm()
     return render(request, 'main/new_post.html', {'form': form})
+
+

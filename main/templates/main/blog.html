@@ -29,7 +29,7 @@
   </a>
 </div>
 
-<h2>My Blog</h2>
+<p></p>
 {% for post in posts %}
         <h2><a href="{% url 'main:blog_post' post.id %}">{{ post.title }}</a></h2>
         <p>Published on: {{ post.pub_date }}</p>

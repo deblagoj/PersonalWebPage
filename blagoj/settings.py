@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main',
     'django_distill',
+   
+
     # Add our new application
     #'catalog.apps.mainConfig', #This object was created for us in /catalog/apps.py
 ]
@@ -132,3 +134,5 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
